@@ -12,7 +12,7 @@ def example():
     print e_c
     print "matrix D"
     print d
-    rAFIs = etfi(d, e_r, e_c, .5)
+    rAFIs = etfi_binary(d, e_r, e_c, .5)
     print "output"
     print "rAFIs"
     print rAFIs
@@ -20,7 +20,7 @@ def example():
 import math
 
 # takes a matrix D, row error ratio epsilon_r, column error ratio epsilon_c, and minimum support threshold minsup
-def etfi( D, epsilon_r, epsilon_c, minsup ):
+def etfi_binary( D, epsilon_r, epsilon_c, minsup ):
     # holds the support set (list of row indices) for each itemset I
     T = {}
     # holds the set of itemsetS at EACH level k
